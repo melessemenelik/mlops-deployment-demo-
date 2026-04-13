@@ -1,41 +1,40 @@
 # 🚀 MLOps Deployment Demo  
 
-![Python](https://img.shields.io/badge/Python-3.10+-blue?logo=python)  
-![FastAPI](https://img.shields.io/badge/FastAPI-009688?logo=fastapi&logoColor=white)  
-![Docker](https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=white)  
-![MLflow](https://img.shields.io/badge/MLflow-0194E2?logo=mlflow&logoColor=white)  
-![AWS SageMaker](https://img.shields.io/badge/AWS-SageMaker-orange?logo=amazonaws&logoColor=white)  
+![Python](https://img.shields.io/badge/Python-3.10+-blue?logo=python) 
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?logo=fastapi&logoColor=white) 
+![Docker](https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=white) 
+![MLflow](https://img.shields.io/badge/MLflow-0194E2?logo=mlflow&logoColor=white) 
+![AWS SageMaker](https://img.shields.io/badge/AWS-SageMaker-orange?logo=amazonaws&logoColor=white) 
 ![License: MIT](https://img.shields.io/badge/License-MIT-green)  
 
+---
 
-📖 Description
-End‑to‑end MLOps pipeline demo showcasing model training, packaging, and deployment with FastAPI, Docker, MLflow, and AWS SageMaker. Includes CI/CD workflows via GitHub Actions and monitoring scripts for performance tracking and drift detection.
+## 📖 Description  
+End‑to‑end MLOps pipeline demo showcasing model training, packaging, and deployment with **FastAPI**, **Docker**, **MLflow**, and **AWS SageMaker**. Includes **CI/CD workflows** via GitHub Actions and **monitoring scripts** for performance tracking and drift detection.  
 
-📦 Features
-FastAPI service for model inference
+---
 
-Dockerized deployment for portability
+## 📦 Features  
+- FastAPI service for model inference  
+- Dockerized deployment for portability  
+- MLflow for experiment tracking & model registry  
+- AWS SageMaker integration for scalable training & hosting  
+- CI/CD workflows with GitHub Actions  
+- Monitoring scripts for performance & drift detection  
 
-MLflow for experiment tracking & model registry
+---
 
-AWS SageMaker integration for scalable training & hosting
+## 🛠 Tech Stack  
+- **Languages:** Python  
+- **Frameworks:** FastAPI, MLflow  
+- **Deployment:** Docker, AWS SageMaker  
+- **CI/CD:** GitHub Actions  
+- **Monitoring:** Prometheus, Grafana (optional)  
 
-CI/CD workflows with GitHub Actions
+---
 
-Monitoring scripts for performance & drift detection
+## 📂 Repository Structure  
 
-🛠 Tech Stack
-Languages: Python
-
-Frameworks: FastAPI, MLflow
-
-Deployment: Docker, AWS SageMaker
-
-CI/CD: GitHub Actions
-
-Monitoring: Prometheus, Grafana (optional)
-
-📂 Repository Structure
 Code
 mlops-deployment-demo/
 │── src/
