@@ -34,10 +34,12 @@ End‑to‑end MLOps pipeline demo showcasing model training, packaging, and dep
 ---
 
 ## 📂 Repository Structure  
-⚡ Quickstart
-Clone the repo and install dependencies:
 
-bash
+---
+
+## ⚡ Quickstart  
+Clone the repo and install dependencies:  
+```bash
 git clone https://github.com/yourusername/mlops-deployment-demo.git
 cd mlops-deployment-demo
 pip install -r requirements.txt
@@ -45,14 +47,3 @@ uvicorn src.inference:app --reload
 curl -X POST "http://127.0.0.1:8000/predict" \
      -H "Content-Type: application/json" \
      -d '{"features": [5.1, 3.5, 1.4, 0.2]}'
-🔄 CI/CD Workflow
-Push to main triggers GitHub Actions
-
-Workflow runs tests, builds Docker image, and pushes to registry
-
-Deploys container to AWS SageMaker endpoint
-
-📊 Monitoring
-monitor.py tracks latency, accuracy, and drift
-
-Metrics exported to Prometheus/Grafana dashboards
