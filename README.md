@@ -34,21 +34,6 @@ End‑to‑end MLOps pipeline demo showcasing model training, packaging, and dep
 ---
 
 ## 📂 Repository Structure  
-
-Code
-mlops-deployment-demo/
-│── src/
-│   ├── train.py           # Model training script
-│   ├── inference.py       # FastAPI inference service
-│   ├── monitor.py         # Monitoring & drift detection
-│── docker/
-│   └── Dockerfile         # Container build
-│── ci-cd/
-│   └── github-actions.yml # CI/CD workflow
-│── requirements.txt       # Dependencies
-│── README.md              # Project overview
-│── LICENSE                # MIT License
-│── .gitignore             # Ignore unnecessary files
 ⚡ Quickstart
 Clone the repo and install dependencies:
 
