@@ -1,10 +1,12 @@
 🚀 MLOps Deployment Demo
+
 (https://img.shields.io/badge/Python-3.10+-blue?logo=python)  
 (https://img.shields.io/badge/FastAPI-009688?logo=fastapi&logoColor=white)  
 (https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=white)  
 (https://img.shields.io/badge/MLflow-0194E2?logo=mlflow&logoColor=white)  
 (https://img.shields.io/badge/AWS-SageMaker-orange?logo=amazonaws&logoColor=white)  
 (https://img.shields.io/badge/License-MIT-green)
+
 📖 Description
 End‑to‑end MLOps pipeline demo showcasing model training, packaging, and deployment with FastAPI, Docker, MLflow, and AWS SageMaker. Includes CI/CD workflows via GitHub Actions and monitoring scripts for performance tracking and drift detection.
 
