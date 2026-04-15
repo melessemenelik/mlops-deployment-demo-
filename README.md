@@ -70,6 +70,36 @@ curl -X POST "http://127.0.0.1:8000/predict" \
      -H "Content-Type: application/json" \
      -d '{"features": [5.1, 3.5, 1.4, 0.2]}'
 
+## 🏗️ System Architecture  
+
+```mermaid
+graph TD
+    subgraph Dev[Development Environment]
+        A[Source Code (Python)] --> B[FastAPI Service]
+        A --> C[Training Scripts]
+    end
+
+    subgraph Exp[Experiment Tracking]
+        C --> D[MLflow Tracking Server]
+        D --> E[Model Registry]
+    end
+
+    subgraph Deploy[Deployment Layer]
+        B --> F[Docker Container]
+        F --> G[AWS SageMaker Endpoint]
+    end
+
+    subgraph CI[CI/CD Pipeline]
+        H[GitHub Actions] --> F
+        H --> G
+    end
+
+    subgraph Mon[Monitoring]
+        G --> I[Prometheus/Grafana]
+        I --> J[Drift Detection & Alerts]
+    end
+
+
 ## 🔄 MLOps Workflow  
 
 ```mermaid
