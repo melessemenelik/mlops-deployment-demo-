@@ -9,6 +9,17 @@
 
 ---
 
+## 📑 Table of Contents
+- [Description](#-description)
+- [Features](#-features)
+- [Tech Stack](#-tech-stack)
+- [Repository Structure](#-repository-structure)
+- [Quickstart](#-quickstart)
+- [Future Work](#-future-work)
+- [MLOps Workflow](#-mlops-workflow)
+
+---
+
 ## 📖 Description  
 End‑to‑end MLOps pipeline demo showcasing model training, packaging, and deployment with **FastAPI**, **Docker**, **MLflow**, and **AWS SageMaker**. Includes **CI/CD workflows** via GitHub Actions and **monitoring scripts** for performance tracking and drift detection.  
 
@@ -34,16 +45,36 @@ End‑to‑end MLOps pipeline demo showcasing model training, packaging, and dep
 ---
 
 ## 📂 Repository Structure  
+mlops-deployment-demo/  
+├── src/                  # Source code for training & inference  
+│   ├── train_model.py    # Model training script  
+│   ├── inference.py      # FastAPI inference service  
+│   └── monitoring.py     # Drift detection & performance monitoring  
+├── docker/               # Dockerfiles for containerization  
+├── workflows/            # GitHub Actions CI/CD pipelines  
+├── requirements.txt      # Python dependencies  
+├── README.md             # Project documentation  
+├── LICENSE               # MIT License  
+└── .gitignore            # Ignore build and environment files  
 
 ---
 
 ## ⚡ Quickstart  
 Clone the repo and install dependencies:  
 ```bash
-git clone https://github.com/yourusername/mlops-deployment-demo.git
+git clone https://github.com/melessemenelik/mlops-deployment-demo.git
 cd mlops-deployment-demo
 pip install -r requirements.txt
 uvicorn src.inference:app --reload
 curl -X POST "http://127.0.0.1:8000/predict" \
      -H "Content-Type: application/json" \
      -d '{"features": [5.1, 3.5, 1.4, 0.2]}'
+
+🔄 MLOps Workflow
+flowchart LR
+    A[Data Ingestion] --> B[Model Training]
+    B --> C[Experiment Tracking (MLflow)]
+    C --> D[Model Packaging (Docker)]
+    D --> E[Deployment (FastAPI + AWS SageMaker)]
+    E --> F[CI/CD (GitHub Actions)]
+    F --> G[Monitoring & Drift Detection]
