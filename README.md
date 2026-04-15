@@ -70,35 +70,47 @@ curl -X POST "http://127.0.0.1:8000/predict" \
      -H "Content-Type: application/json" \
      -d '{"features": [5.1, 3.5, 1.4, 0.2]}'
 
-## 🏗️ System Architecture  
+## 🏗️ Architecture Diagram
 
-```mermaid
-graph TD
-    subgraph Dev[Development Environment]
-        A[Source Code (Python)] --> B[FastAPI Service]
-        A --> C[Training Scripts]
-    end
+This project demonstrates end‑to‑end MLOps deployment:
 
-    subgraph Exp[Experiment Tracking]
-        C --> D[MLflow Tracking Server]
-        D --> E[Model Registry]
-    end
+                 ┌───────────────────────────────┐
+                 │     Development Environment   │
+                 │  Python Source + Training     │
+                 │  FastAPI Inference Service    │
+                 └───────────────┬───────────────┘
+                                 │
+                                 ▼
+                 ┌───────────────────────────────┐
+                 │   Experiment Tracking Layer   │
+                 │  MLflow Tracking + Registry   │
+                 └───────────────┬───────────────┘
+                                 │
+                                 ▼
+                 ┌───────────────────────────────┐
+                 │   Deployment Layer            │
+                 │  Docker Containerized Service │
+                 │  AWS SageMaker Hosting        │
+                 └───────────────┬───────────────┘
+                                 │
+                                 ▼
+                 ┌───────────────────────────────┐
+                 │   CI/CD Pipeline              │
+                 │  GitHub Actions Automation    │
+                 └───────────────┬───────────────┘
+                                 │
+                                 ▼
+                 ┌───────────────────────────────┐
+                 │   Monitoring & Drift Detection│
+                 │  Prometheus / Grafana Alerts  │
+                 └───────────────────────────────┘
 
-    subgraph Deploy[Deployment Layer]
-        B --> F[Docker Container]
-        F --> G[AWS SageMaker Endpoint]
-    end
-
-    subgraph CI[CI/CD Pipeline]
-        H[GitHub Actions] --> F
-        H --> G
-    end
-
-    subgraph Mon[Monitoring]
-        G --> I[Prometheus/Grafana]
-        I --> J[Drift Detection & Alerts]
-    end
-
+Key components:
+- **[Development](ca://s?q=Explain_development_environment_in_MLOps)**: Python code, FastAPI service, training scripts  
+- **[Experiment tracking](ca://s?q=Explain_experiment_tracking_with_MLflow)**: MLflow server + model registry  
+- **[Deployment](ca://s?q=Explain_docker_and_SageMaker_deployment)**: Dockerized service hosted on AWS SageMaker  
+- **[CI/CD](ca://s?q=Explain_CI_CD_in_MLOps)**: GitHub Actions automating build and deploy  
+- **[Monitoring](ca://s?q=Explain_monitoring_and_drift_detection_in_MLOps)**: Prometheus/Grafana dashboards and alerts
 
 ## 🔄 MLOps Workflow  
 
