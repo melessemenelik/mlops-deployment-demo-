@@ -117,9 +117,10 @@ Key components:
 
 ```mermaid
 flowchart LR
-    A[Data Ingestion] --> B[Model Training]
-    B --> C[Experiment Tracking (MLflow)]
-    C --> D[Model Packaging (Docker)]
-    D --> E[Deployment (FastAPI + AWS SageMaker)]
-    E --> F[CI/CD (GitHub Actions)]
-    F --> G[Monitoring & Drift Detection] ```
+    A["Data Ingestion"] --> B["Model Training"]
+    B --> C["Experiment Tracking:<br>MLflow"]
+    C --> D["Model Packaging:<br>Docker"]
+    D --> E["Deployment:<br>FastAPI + AWS SageMaker"]
+    E --> F["CI/CD:<br>GitHub Actions"]
+    F --> G["Monitoring & Drift Detection"]
+
