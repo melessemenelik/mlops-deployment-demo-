@@ -112,6 +112,7 @@ Key components:
 - **[CI/CD](ca://s?q=Explain_CI_CD_in_MLOps)**: GitHub Actions automating build and deploy  
 - **[Monitoring](ca://s?q=Explain_monitoring_and_drift_detection_in_MLOps)**: Prometheus/Grafana dashboards and alerts
 
+```
 ## 🔄 MLOps Workflow  
 
 ```mermaid
